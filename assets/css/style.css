@@ -25,6 +25,7 @@ h1 {
     background-color: black;
     position: relative;
     top: 35vh; 
+    left: 1vw;
 }
 
 .jump {
@@ -34,17 +35,28 @@ h1 {
 
 @keyframes jump {
     0%{top: 35vh;}
-    50%{top: 20vh;}
+    65%{top: 20vh;}
+    100%{top: 35vh;}
+}
+
+.djump {
+    animation: djump 1.5s;
+}
+
+@keyframes djump {
+    0%{top: 35vh;}
+    70%{top: 10vh;}
     100%{top: 35vh;}
 }
 
 
-.obstacle1 {
-    width: 1vw;
-    height: 35vh;
+#obstacle {
+    width: 2vw;
+    height: 2vh;
     background-color: beige;
     position: relative;
     left: 79vw;
+    bottom: 40vh;
     animation: block 2s infinite linear;
 }
 
