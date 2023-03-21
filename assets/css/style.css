@@ -25,8 +25,12 @@ h1 {
     background-color: black;
     position: relative;
     top: 35vh; 
-    animation: jump 1s infinite;
 }
+
+.jump {
+    animation: jump 1s;
+}
+
 
 @keyframes jump {
     0%{top: 35vh;}
@@ -47,8 +51,4 @@ h1 {
 @keyframes block {
     0%{left: 80vw;}
     100%{left: 0vw}
-}
-
-.hole {
-    
 }
