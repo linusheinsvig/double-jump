@@ -1,5 +1,6 @@
 let character = document.getElementById("character");
 let game = document.querySelector(".game-window")
+let point = document.getElementById("point")
 let obstacle = document.getElementById("obstacle")
 
 function jump() {
@@ -26,7 +27,19 @@ game.addEventListener("dblclick", function (event) {
   djump();
 });
 
-obstacle.addEventListener('animationiteration', () => {
-  let random = ((Math.random()*600)+300);
-  obstacle.style.top = random + "px";
+ point.addEventListener('animationiteration', () => {
+  let random = ((Math.random()*300));
+  point.style.top = random + "px";
 });
+
+let isAlive = setInterval(function (){
+
+  let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"))
+  let obstacleLeft = parseInt(window.getComputedStyle(obstacle).getPropertyValue("left"))
+
+  if(obstacleLeft < 37 && obstacleLeft > 0 && characterTop >= 200) {
+    console.log("collision");
+    aler("Game Over!")
+  }
+
+}, 10)

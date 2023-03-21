@@ -17,6 +17,7 @@ h1 {
     overflow: hidden;
     background-color: aqua;
     margin: auto;
+    
 }
 
 #character {
@@ -50,17 +51,25 @@ h1 {
 }
 
 
-#obstacle {
+#point {
     width: 2vw;
     height: 2vh;
     background-color: beige;
     position: relative;
-    left: 79vw;
-    bottom: 40vh;
-    animation: block 2s infinite linear;
+    animation: block 3s infinite linear;
 }
 
 @keyframes block {
     0%{left: 80vw;}
     100%{left: 0vw}
 }
+
+#obstacle {
+    background-color: blueviolet;
+    width: 2vw;
+    height: 7vh;
+    position: relative;
+    top: 26vh;
+    animation: block 2s infinite linear;
+}
+
