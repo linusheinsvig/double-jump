@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+   
+}
+
+h1 {
+    text-align: center;
+    font-size: 4vw;
+    padding: 1em;
+}
+
+.game-window {
+    width: 80vw;
+    height: 40vh;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: aqua;
+    margin: auto;
+}
+
+#character {
+    width: 2vw;
+    height: 5vh;
+    background-color: black;
+    position: relative;
+    top: 35vh; 
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0%{top: 35vh;}
+    50%{top: 20vh;}
+    100%{top: 35vh;}
+}
+
+
+.obstacle1 {
+    width: 1vw;
+    height: 35vh;
+    background-color: beige;
+    position: relative;
+    left: 79vw;
+    animation: block 2s infinite linear;
+}
+
+@keyframes block {
+    0%{left: 80vw;}
+    100%{left: 0vw}
+}
+
+.hole {
+    
+}
