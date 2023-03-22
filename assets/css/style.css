@@ -11,13 +11,22 @@ h1 {
 }
 
 .game-window {
-    width: 80vw;
+    background-image: url(/assets/images/background.webp);
+    background-size: 100%;
+    width: 60vw;
     height: 40vh;
     border: 1px solid black;
     overflow: hidden;
-    background-color: aqua;
     margin: auto;
-    
+    transition: 0.5s;
+    transform: scale(1);
+    flex: 1;
+}
+
+.game-window:hover {
+    transform: scale(1.1); 
+    z-index: 2;
+    flex: 2;
 }
 
 #character {
